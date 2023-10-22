@@ -1,0 +1,355 @@
+/* @charset "UTF-8"; */
+
+/* 共通 */
+
+body{
+    width: 100vw;
+    height: 100vw;
+    font-family:Helvetica Neue、Arial、Hiragino Sans、Hiragino Kaku Gothic ProN、Meiryo、sans-serif ;
+}
+
+
+
+/* ナビゲーション */
+
+li {
+    list-style: none;
+}
+
+.main-nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-nav a {
+    position: relative;
+    text-decoration: none;
+    margin-left: 30px;
+    margin-right: 10px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 2px 3px grey;
+}
+
+
+
+/* メイン画像＋テキスト（COFFEE) */
+
+.text-coffee {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    margin-top: 40vh;
+    filter: drop-shadow(1px 1px 10px gray);
+
+}
+#home {
+    background-image: url(images/mainvisual.jpg);
+    background-size: cover;
+    min-height: 100vh;
+}
+
+/* パララックスエリア */
+.parallax_content{
+    min-height:300px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+.front_content{
+    padding: 60px;
+    background-color: #fff;
+    
+}
+.parallax_content.menu{
+    background-image: url(images/menu.jpg);
+    margin-top: 20px;
+}
+.parallax_content.about{
+    background-image: url(images/about.jpg);
+}
+.parallax_content.location{
+    background-image: url(images/location.jpg);
+}
+.parallax_content.menu{
+    position: relative;
+}
+.parallax_content h2{
+    font-size: 70px; 
+    color: #fff;
+    text-align: center;
+    padding-top: 100px;
+    filter: drop-shadow(1px 1px 10px gray);
+}
+
+/* パララックス＿menuコンテンツ */
+.menu_section{
+    display: flex;
+}
+.content{
+    width: 50%;
+    height: 800px;
+    padding-left: 16px;
+    background-color: #fff;
+}
+.content2{
+    width: 50%;
+    height:800px;
+    padding-right: 16px;
+    background-color: #fff;
+    justify-content: center;
+    
+}
+.line{
+  margin: 70px 0 60px 0;
+  width: 1px;
+  background-color: #000;
+}
+
+.h3_coffee{
+    text-align: center;
+    margin-top: 80px;
+    font-size: 40px; 
+    text-decoration: underline 5px  red;
+    text-underline-offset: 15px;
+}
+
+.h3_food{
+    
+    margin: 80px 40%;
+    font-size: 40px; 
+    text-decoration: underline 5px  red;
+    text-underline-offset: 15px;
+}
+.h3_other{
+    
+    margin: 65px 40%;
+    font-size: 40px; 
+    text-decoration: underline 5px  red;
+    text-underline-offset: 15px;
+}
+
+.price{
+    justify-content: center;
+    display: flex;
+    margin: 40px 0 0 0;
+    font-size: 15px;
+}
+.food {
+    text-align: center;   
+}
+.other{
+    text-align: center;
+}
+
+.coffee dt,
+.food dt,
+.other dt {
+    border-bottom: 1px dotted gray;
+}
+
+.about_coffee,
+.location_store{
+    text-align: center;
+    margin-top: 80px;
+    font-size: 40px; 
+    text-decoration: underline 5px  red;
+    text-underline-offset: 15px;
+}
+/* ABOUT */
+
+.content3{
+    padding: 50px 20px 150px 20px;
+    height: 900px;
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.text_content {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+    
+}
+.text_content >li{
+    width: 50%;
+    text-align: left;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 16px;
+}
+/* readmoreボタンの文字 */
+.readmore a{
+    text-shadow: none;
+    color: #000;
+    font-weight: 100;
+    text-decoration: none;
+}
+/* readmoreボタン・基点 */
+.readmore{
+  margin: 50px 0 0 400px;
+  background: white;
+  padding: 10px 30px;
+  color: #fff;
+  display: block;
+  max-width:300px;
+  text-align: center;
+  position: relative;
+}
+
+/* readmore要素の直前・直後*/
+.readmore::before,
+.readmore::after{
+    content: '';
+    position: absolute;
+    /* 30pxの長さの線 */
+    width: 30px;
+    height: 30px;
+    transition: 0.2s linear;
+    
+}
+
+.readmore::before{
+    border-left: 2px solid red;
+    border-top: 2px solid red;
+    /* 線の起点位置 */
+    top: 0;
+    left: 0;
+}
+
+.readmore::after{
+    border-right: 2px solid red;
+    border-bottom: 2px solid red;
+    /* 線の起点位置 */
+    bottom: 0;
+    right: 0;
+}
+
+.readmore:hover::before,
+.readmore:hover::after{
+    width:100%;
+    height:100%;
+}
+
+/* OUR STORE */
+.map{
+    width: 100%;
+    margin-top: 50px ;
+    filter: grayscale(1);
+}
+
+.text p{
+    font-size: 15px;
+
+}
+/* フッター */
+footer p{
+    text-align: center;
+    font-size: 10px;
+}
+
+/* レスポンシブ */
+@media screen and (max-width:767px){
+    .main-nav{
+        display: flex;
+        justify-content: center;
+    }
+    h1{
+        font-size: 80px;
+    }
+    .parallax_content h2{
+        font-size: 50px; 
+        color: #fff;
+        text-align: center;
+        padding-top: 40px;
+        filter: drop-shadow(1px 1px 10px gray);
+    }
+    
+    .menu_section{
+        display: block;
+    }
+    .content{
+        width: 100%;
+        height: 600px;
+        padding-left: 16px;
+        background-color: #fff;
+    }
+    .content2{
+        width: 100%;
+        height: 700px;
+        
+    }
+    .content3{
+        width: 100%;
+        height: 1300px;
+    }
+    .readmore{
+        margin: 50px auto 60px auto ;
+        font-size: 25px;
+        background: white;
+        padding: 10px 30px;
+        color: #fff;
+        display: block;
+        max-width:500px;
+        text-align: center;
+
+      }
+    .text_content{
+        display: block;
+    }
+    .text_content li{
+        width: 100%;
+        font-size: 16px;
+    }
+    
+    .parallax_content{
+        min-height:150px; 
+    }
+    .parallax_content.menu{
+        background-image: url(images/menu.jpg);
+        width: 100%;
+        height: 150px;
+        margin-top: 20px;
+    }
+    .parallax_content.about{
+        background-image: url(images/about.jpg);
+    }
+    .parallax_content.location{
+        background-image: url(images/location.jpg);
+        margin-top: 50px;
+    }
+    .map-wrap{
+        max-width: 100%;
+    }
+
+    .map{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin-top: 50px;
+        filter: grayscale(1);
+    }
+    .map iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        
+    }
+    
+    .content4{
+        padding: 50px 20px 0 20px;
+        height: 900px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .text{
+        margin-top: 400px;
+    }
+}
+
